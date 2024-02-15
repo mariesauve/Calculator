@@ -1,0 +1,118 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6739ab;
+/*background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%23a576f0' fill-opacity='0.78' fill-rule='evenodd'/%3E%3C/svg%3E");*/
+  background: whitesmoke;
+  background: linear-gradient(to right, #5d95ad, #8d5bd8, #613bd1);
+}
+
+.calculator {
+  background: white;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+}
+
+/* Display */
+.calculator-display {
+  background: #4412ba;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 10px 10px 0 0;
+  max-width: 100%;
+}
+
+.calculator-display h1 {
+  margin: 0;
+  padding: 25px;
+  font-size: 45px;
+  font-family: "Lucida Console", sans-serif;
+  font-weight: 100;
+  overflow-x: auto;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Buttons */
+.calculator-buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+}
+
+button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  border: none;
+  background: rgb(200, 200, 200);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:focus {
+  outline: none;
+}
+
+.operator {
+  background: grey;
+  color: white;
+  font-size: 30px;
+}
+
+.clear {
+  background: rgb(83, 22, 188);
+  color: white;
+}
+
+.clear:hover {
+  filter: brightness(90%);
+}
+
+.equal-sign {
+  grid-column: -2;
+  grid-row: 2 / span 4;
+  background: rgb(13, 126, 247);
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  .calculator {
+    width: 95%;
+  }
+}
